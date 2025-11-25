@@ -727,58 +727,6 @@ function AdminDashboard({ user, go }) {
   );
 }
 
-
-
-// function AddProductPage({ user, go }) {
-//   const [name, setName] = useState("");
-//   const [price, setPrice] = useState("");
-//   const [description, setDescription] = useState("");
-//   const [category, setCategory] = useState("");
-//   const [image, setImage] = useState("");
-
-//   const addProduct = () => {
-//     if (!name || !price) return alert("Please enter product name and price");
-//     const prods = LS.getProducts();
-//     const p = {
-//       id: Date.now(),
-//       name,
-//       price: parseFloat(price),
-//       description,
-//       category,
-//       image,
-//     };
-//     LS.setProducts([p, ...prods]);
-//     alert("Product added");
-//     setName("");
-//     setPrice("");
-//     setDescription("");
-//     setCategory("");
-//     setImage("");
-//     go("admin.dashboard");
-//   };
-
-//   return (
-//     <div>
-//       <Navbar user={user} go={go} />
-//       <div className="page">
-//         <div className="card w-600 mx-auto">
-//           <h1>Add Product</h1>
-//           <div className="vstack gap-12 mt-12">
-//             <input className="input" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-//             <input className="input" type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
-//             <input className="input" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
-//             <input className="input" placeholder="Image URL (optional)" value={image} onChange={(e) => setImage(e.target.value)} />
-//             <textarea className="input" placeholder="Description" rows={3} value={description} onChange={(e) => setDescription(e.target.value)} />
-//             <div className="right hstack gap-8">
-//               <button onClick={() => go("admin.dashboard")} className="btn">Cancel</button>
-//               <button onClick={addProduct} className="btn-success">Save</button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 function AddProductPage({ user, go }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
